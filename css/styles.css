@@ -29,7 +29,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #e91e63;
+    color: #cab29a;
     text-transform: uppercase;
 }
 .logo span {
@@ -47,17 +47,17 @@ header {
     transition: color 0.3s ease;
 }
 .nav-links a:hover {
-    color: #e91e63;
+    color: #cab29a;
 }
 .nav-links .btn {
-    background: #e91e63;
+    background: #cab29a;
     padding: 8px 15px;
     border-radius: 5px;
     color: #fff;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 .nav-links .btn:hover {
-    background: #ff4081;
+    background: white;
     transform: scale(1.05);
 }
 .burger {
@@ -104,7 +104,7 @@ header {
     line-height: 1.2;
 }
 .hero h1 span {
-    color: #e91e63;
+    color: #cab29a;
 }
 .hero p {
     font-size: 1.2rem;
@@ -112,7 +112,7 @@ header {
     color: #f0f0f0;
 }
 .hero .btn {
-    background: #e91e63;
+    background: #cab29a;
     padding: 12px 30px;
     font-size: 1.1rem;
     border-radius: 30px;
@@ -122,7 +122,7 @@ header {
 }
 .hero .btn:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(233, 30, 99, 0.8);
+    box-shadow: 0 8px 20px #cab29a;
 }
 
 /* ABOUT SECTION */
@@ -136,7 +136,7 @@ header {
     margin-bottom: 20px;
 }
 .about span {
-    color: #e91e63;
+    color: #cab29a;
 }
 .about p {
     max-width: 800px;
@@ -171,12 +171,12 @@ header {
     width: 49%;
     height: 150px;
     object-fit: cover;
-    filter: drop-shadow(0 0 15px #e91e63); /* Umbra aurie în jurul imaginii */
+    filter: drop-shadow(0 0 15px #cab29a); /* Umbra aurie în jurul imaginii */
 }
 .car h3 {
     margin: 15px 0;
     font-size: 1.5rem;
-    color: #e91e63;
+    color: #cab29a;
 }
 .car p {
     color: #ddd;
@@ -215,7 +215,7 @@ header {
     font-size: 1rem;
 }
 .contact button {
-    background: #e91e63;
+    background: #cab29a;
     padding: 12px 30px;
     border: none;
     border-radius: 30px;
@@ -226,7 +226,7 @@ header {
     transition: background 0.3s ease, transform 0.3s ease;
 }
 .contact button:hover {
-    background: #ff4081;
+    background: #cab29a;
     transform: scale(1.05);
 }
 
@@ -299,7 +299,7 @@ footer {
     display: none;
 }
 #close-popup {
-    background: #e91e63;
+    background: #cab29a;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -308,5 +308,5 @@ footer {
     transition: background 0.3s ease;
 }
 #close-popup:hover {
-    background: #ff4081;
+    background: #cab29a;
 }
