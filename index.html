@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CityGo - Închiriere Mașini</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "dzbyzcyc5PgYoD9X_",
+      });
+   })();
+</script>
 
 </head>
 
@@ -26,8 +36,7 @@
             </div>
         </nav>
     </header>
-    
-    
+
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Închiriază <span>Mașina Perfectă</span></h1>
@@ -64,11 +73,11 @@
     </section>
 
     <section id="contact" class="contact">
-        <h2>Contacteaz-o pe Deea Samsara 💪 </h2>
+        <h2>Contactează-ne</h2>
         <form id="contact-form">
-            <input type="text" placeholder="Nume complet" required>
-            <input type="email" placeholder="Adresă de email" required>
-            <textarea rows="5" placeholder="Mesajul tău" required></textarea>
+            <input type="text" id="name" placeholder="Nume complet" required>
+            <input type="email" id="email" placeholder="Adresă de email" required>
+            <textarea rows="5" id="message" placeholder="Mesajul tău" required></textarea>
             <button type="submit">Trimite</button>
         </form>
         <!-- Popup pentru confirmare -->
@@ -77,13 +86,12 @@
             <button id="close-popup">Închide</button>
         </div>
     </section>
-    
-    
-    
+
     <footer>
         <p>&copy; 2025 CityGo. Toate drepturile rezervate.</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/mail.js"></script>
 </body>
 </html>
