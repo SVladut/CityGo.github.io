@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityGo - Închiriere Mașini</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">City<span>Go</span></div>
+            <ul class="nav-links">
+                <li><a href="#hero">Acasă</a></li>
+                <li><a href="#about">Despre Noi</a></li>
+                <li><a href="#cars">Mașinile Noastre</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="rezerva.html" class="btn">Rezervă Acum</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Închiriază <span>Mașina Perfectă</span></h1>
+            <p>Experiența ta de conducere începe aici. Închiriază rapid și ușor cu CityGo!</p>
+            <a href="rezerva.html" class="btn">Începe Acum</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Despre <span>Noi</span></h2>
+        <p>La CityGo, oferim soluții de închiriere a mașinilor accesibile și de încredere pentru orice ocazie. 
+            Indiferent dacă ai nevoie de o mașină pentru o zi, o săptămână sau mai mult, suntem aici pentru tine!</p>
+    </section>
+
+    <section id="cars" class="cars">
+        <h2>Mașinile <span>Noastre</span></h2>
+        <div class="car-grid">
+            <div class="car">
+                <img src="imagini/spring.png" alt="Sedan Modern">
+                <h3>Sedan Modern</h3>
+                <p>Elegant și confortabil pentru călătoriile în oraș.</p>
+            </div>
+            <div class="car">
+                <img src="imagini/suv.png" alt="SUV Puternic">
+                <h3>SUV Puternic</h3>
+                <p>Perfect pentru aventurile de weekend și drumuri off-road.</p>
+            </div>
+            <div class="car">
+                <img src="imagini/eco.png" alt="Mașină Economică">
+                <h3>Mașină Economică</h3>
+                <p>Eficiență de combustibil și preț accesibil.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contacteaz-o pe Deea Samsara 💪 </h2>
+        <form id="contact-form">
+            <input type="text" placeholder="Nume complet" required>
+            <input type="email" placeholder="Adresă de email" required>
+            <textarea rows="5" placeholder="Mesajul tău" required></textarea>
+            <button type="submit">Trimite</button>
+        </form>
+        <!-- Popup pentru confirmare -->
+        <div id="popup" class="popup hidden">
+            <p>Vă mulțumim pentru mesaj! O să revenim cu un răspuns în cel mai scurt timp!</p>
+            <button id="close-popup">Închide</button>
+        </div>
+    </section>
+    
+    
+    
+    <footer>
+        <p>&copy; 2025 CityGo. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervă Acum - CityGo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">City<span>Go</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="index.html#about">Despre Noi</a></li>
+                <li><a href="index.html#cars">Mașinile Noastre</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="rezerva.html" class="btn">Rezervă Acum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="rezerva" class="contact">
+        <h2>Rezervă Mașina Ta</h2>
+        <form>
+            <input type="text" placeholder="Nume complet" required>
+            <input type="email" placeholder="Adresă de email" required>
+            <input type="tel" placeholder="Număr de telefon" required>
+            <input type="date" placeholder="Data începutului" required>
+            <input type="date" placeholder="Data sfârșitului" required>
+            <select required>
+                <option value="" disabled selected>Alege o mașină</option>
+                <option value="sedan">Sedan Modern</option>
+                <option value="suv">SUV Puternic</option>
+                <option value="economica">Mașină Economică</option>
+            </select>
+            <button type="submit">Rezervă</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CityGo. Toate drepturile rezervate.</p>
+    </footer>
+</body>
+</html>
