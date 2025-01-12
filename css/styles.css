@@ -1,8 +1,10 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #1c1c1c, #333);
@@ -13,42 +15,49 @@ body {
 /* HEADER */
 header {
     position: fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 15px 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #cab29a;
     text-transform: uppercase;
 }
+
 .logo span {
     color: #fff;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
+
 .nav-links a {
     text-decoration: none;
     color: #fefefe;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
+
 .nav-links a:hover {
     color: #cab29a;
 }
+
 .nav-links .btn {
     background: #cab29a;
     padding: 8px 15px;
@@ -56,19 +65,10 @@ header {
     color: #fff;
     transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .nav-links .btn:hover {
     background: white;
     transform: scale(1.05);
-}
-.burger {
-    display: none;
-    cursor: pointer;
-}
-.burger .line {
-    background: #fff;
-    height: 3px;
-    width: 25px;
-    margin: 4px 0;
 }
 
 /* HERO SECTION */
@@ -82,6 +82,7 @@ header {
     position: relative;
     overflow: hidden;
 }
+
 .hero::before {
     content: "";
     position: absolute;
@@ -92,25 +93,30 @@ header {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
+
 .hero-content {
     position: relative;
     z-index: 2;
     color: #fff;
     animation: fadeIn 1.5s ease;
 }
+
 .hero h1 {
     font-size: 3.5rem;
     text-transform: uppercase;
     line-height: 1.2;
 }
+
 .hero h1 span {
     color: #cab29a;
 }
+
 .hero p {
     font-size: 1.2rem;
     margin: 20px 0;
     color: #f0f0f0;
 }
+
 .hero .btn {
     background: #cab29a;
     padding: 12px 30px;
@@ -120,6 +126,7 @@ header {
     text-transform: uppercase;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .hero .btn:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px #cab29a;
@@ -131,13 +138,16 @@ header {
     background: linear-gradient(135deg, #333, #444);
     text-align: center;
 }
+
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
+
 .about span {
     color: #cab29a;
 }
+
 .about p {
     max-width: 800px;
     margin: 0 auto;
@@ -151,15 +161,18 @@ header {
     background: linear-gradient(135deg, #222, #111);
     text-align: center;
 }
+
 .cars h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
 }
+
 .car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
+
 .car {
     background: #333;
     border-radius: 15px;
@@ -167,22 +180,26 @@ header {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .car img {
-    width: 49%;
+    width: 100%;
     height: 150px;
     object-fit: cover;
-    filter: drop-shadow(0 0 15px #cab29a); /* Umbra aurie în jurul imaginii */
+    filter: drop-shadow(0 0 15px #cab29a);
 }
+
 .car h3 {
     margin: 15px 0;
     font-size: 1.5rem;
     color: #cab29a;
 }
+
 .car p {
     color: #ddd;
     padding: 0 15px 15px;
     font-size: 1rem;
 }
+
 .car:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
@@ -194,10 +211,12 @@ header {
     background: linear-gradient(135deg, #444, #333);
     text-align: center;
 }
+
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
+
 .contact form {
     max-width: 600px;
     margin: 0 auto;
@@ -205,6 +224,7 @@ header {
     flex-direction: column;
     gap: 15px;
 }
+
 .contact input, .contact textarea {
     width: 100%;
     padding: 12px;
@@ -214,6 +234,7 @@ header {
     color: #fff;
     font-size: 1rem;
 }
+
 .contact button {
     background: #cab29a;
     padding: 12px 30px;
@@ -221,12 +242,11 @@ header {
     border-radius: 30px;
     font-size: 1.1rem;
     color: #fff;
-    text-transform: uppercase;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
+
 .contact button:hover {
-    background: #cab29a;
     transform: scale(1.05);
 }
 
@@ -240,45 +260,7 @@ footer {
     border-top: 1px solid #222;
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .burger {
-        display: block;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    .car-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Stiluri pentru popup */
+/* POPUP */
 .popup {
     position: fixed;
     top: 50%;
@@ -295,9 +277,11 @@ footer {
     flex-direction: column;
     gap: 15px;
 }
+
 .popup.hidden {
     display: none;
 }
+
 #close-popup {
     background: #cab29a;
     color: #fff;
@@ -307,6 +291,41 @@ footer {
     cursor: pointer;
     transition: background 0.3s ease;
 }
+
 #close-popup:hover {
     background: #cab29a;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 10px 0;
+        display: none;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
 }

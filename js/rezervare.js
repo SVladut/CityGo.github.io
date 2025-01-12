@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const rezervareForm = document.getElementById('rezervare-form');
+    const rezervarePopup = document.getElementById('rezerva-popup');
+    const closeRezervarePopup = document.getElementById('close-rezerva-popup');
 
     // Așteaptă trimiterea formularului de rezervare
     rezervareForm.addEventListener('submit', function (e) {
@@ -27,30 +28,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Trimiterea emailului către tine pentru rezervare
         emailjs.send('service_5d2v6jy', 'template_dkrnkfi', templateParamsReservation)
-            .then(function(response) {
+            .then(function (response) {
                 console.log('Email trimis cu succes pentru rezervare:', response);
-            }, function(error) {
-                console.log('Eșec la trimiterea emailului de rezervare:', error);
+
+                // Parametrii pentru template-ul de confirmare (emailul care va ajunge la utilizator)
+                const templateParamsConfirmation = {
+                    from_name: name,
+                    to_email: email,
+                    phone: phone,
+                    start_date: startDate,
+                    end_date: endDate,
+                    car: car
+                };
+
+                // Trimiterea emailului de confirmare către utilizator
+                return emailjs.send('service_5d2v6jy', 'template_ixxybf6', templateParamsConfirmation);
+            })
+            .then(function (response) {
+                console.log('Email de confirmare trimis cu succes către utilizator:', response);
+
+                // Afișează popup-ul
+                rezervarePopup.classList.remove('hidden');
+            })
+            .catch(function (error) {
+                console.log('Eroare la trimiterea emailului:', error);
                 alert('Eroare la trimiterea rezervării. Încearcă din nou!');
-            });
-
-        // Parametrii pentru template-ul de confirmare (emailul care va ajunge la utilizator)
-        const templateParamsConfirmation = {
-            from_name: name,
-            to_email: email, // Adresa ta de email
-            phone: phone, // Numărul de telefon
-            start_date: startDate,
-            end_date: endDate,
-            car: car
-         };
-
-        // Trimiterea emailului de confirmare către utilizator
-        emailjs.send('service_5d2v6jy', 'template_ixxybf6', templateParamsConfirmation)
-            .then(function(response) {
-            }, function(error) {
-                console.log('Eșec la trimiterea emailului de confirmare:', error);
-                alert('Eroare la trimiterea confirmării. Încearcă din nou!');
             });
     });
 
+    // Închide popup-ul când utilizatorul apasă pe butonul "Închide"
+    closeRezervarePopup.addEventListener('click', () => {
+        rezervarePopup.classList.add('hidden'); // Ascunde popup-ul
+    });
 });
