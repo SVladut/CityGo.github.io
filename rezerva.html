@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rezervă Acum - CityGo</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "oWaOiq7LXhUV_xUPG",
+      });
+   })();
+</script>
+
 </head>
 <body>
     <header>
@@ -22,17 +33,17 @@
 
     <section id="rezerva" class="contact">
         <h2>Rezervă Mașina Ta</h2>
-        <form>
-            <input type="text" placeholder="Nume complet" required>
-            <input type="email" placeholder="Adresă de email" required>
-            <input type="tel" placeholder="Număr de telefon" required>
-            <input type="date" placeholder="Data începutului" required>
-            <input type="date" placeholder="Data sfârșitului" required>
-            <select required>
+        <form id="rezervare-form">
+            <input type="text" id="name" placeholder="Nume complet" required>
+            <input type="email" id="email" placeholder="Adresă de email" required>
+            <input type="tel" id="phone" placeholder="Număr de telefon" required>
+            <input type="date" id="start-date" placeholder="Data începutului" required>
+            <input type="date" id="end-date" placeholder="Data sfârșitului" required>
+            <select id="car" required>
                 <option value="" disabled selected>Alege o mașină</option>
-                <option value="sedan">Sedan Modern</option>
-                <option value="suv">SUV Puternic</option>
-                <option value="economica">Mașină Economică</option>
+                <option value="Sedan Modern">Sedan Modern</option>
+                <option value="SUV Puternic">SUV Puternic</option>
+                <option value="Mașină Economică">Mașină Economică</option>
             </select>
             <button type="submit">Rezervă</button>
         </form>
@@ -41,5 +52,7 @@
     <footer>
         <p>&copy; 2025 CityGo. Toate drepturile rezervate.</p>
     </footer>
+
+    <script src="js/rezervare.js"></script>
 </body>
 </html>

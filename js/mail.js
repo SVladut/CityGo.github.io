@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
         emailjs.send('service_1wu7ipm', 'template_8565gfg', templateParamsContact)
             .then(function(response) {
                 console.log('Email trimis cu succes către tine:', response);
-                alert('Email trimis cu succes!');
             }, function(error) {
                 console.log('Eșec la trimiterea emailului:', error);
                 alert('Eroare la trimiterea emailului. Încearcă din nou!');
@@ -35,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         emailjs.send('service_1wu7ipm', 'template_1ua14hh', templateParamsConfirmation)
             .then(function(response) {
-                console.log('Email trimis cu succes către utilizator:', response);
                 popup.classList.remove('hidden');
             }, function(error) {
                 console.log('Eșec la trimiterea emailului către utilizator:', error);
